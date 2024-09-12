@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.0
+%define		kdeappsver	24.08.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		dolphin-plugins
 Summary:	Dolphin plugins
 Name:		ka6-%{kaname}
-Version:	24.08.0
+Version:	24.08.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	6d1ca867d047e2683cfa4f40cb66df56
+# Source0-md5:	97a5f44c7ca91af3e6835093cdb97bdf
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
