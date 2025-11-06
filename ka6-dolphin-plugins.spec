@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		dolphin-plugins
 Summary:	Dolphin plugins
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	cea6e7d5ff64dd73a482e5cc5daf7d22
+# Source0-md5:	01b92f409d6ec070c0f42bb272d8d9b5
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -75,13 +75,13 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %dir %{_libdir}/qt6/plugins/dolphin/vcs
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphin/vcs/fileviewbazaarplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphin/vcs/fileviewdropboxplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphin/vcs/fileviewgitplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphin/vcs/fileviewhgplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/dolphin/vcs/fileviewsvnplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/makefileactions.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/mountisoaction.so
+%{_libdir}/qt6/plugins/dolphin/vcs/fileviewbazaarplugin.so
+%{_libdir}/qt6/plugins/dolphin/vcs/fileviewdropboxplugin.so
+%{_libdir}/qt6/plugins/dolphin/vcs/fileviewgitplugin.so
+%{_libdir}/qt6/plugins/dolphin/vcs/fileviewhgplugin.so
+%{_libdir}/qt6/plugins/dolphin/vcs/fileviewsvnplugin.so
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/makefileactions.so
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/mountisoaction.so
 %{_datadir}/config.kcfg/fileviewgitpluginsettings.kcfg
 %{_datadir}/config.kcfg/fileviewhgpluginsettings.kcfg
 %{_datadir}/config.kcfg/fileviewsvnpluginsettings.kcfg
