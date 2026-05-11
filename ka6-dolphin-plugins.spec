@@ -6,6 +6,7 @@
 %define		qtver		5.15.2
 %define		kaname		dolphin-plugins
 Summary:	Dolphin plugins
+Summary(pl.UTF-8):	Wtyczki do Dolpina
 Name:		ka6-%{kaname}
 Version:	26.04.1
 Release:	1
