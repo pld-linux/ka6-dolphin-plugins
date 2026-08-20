@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		dolphin-plugins
 Summary:	Dolphin plugins
 Summary(pl.UTF-8):	Wtyczki do Dolpina
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	1f843c20b046f53cc238506d62c50640
+# Source0-md5:	83a05857e99a850ba8817137c2b57f0f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -83,6 +83,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/plugins/dolphin/vcs/fileviewsvnplugin.so
 %{_libdir}/qt6/plugins/kf6/kfileitemaction/makefileactions.so
 %{_libdir}/qt6/plugins/kf6/kfileitemaction/mountisoaction.so
+%dir %{_libdir}/qt6/plugins/kf6/overlayicon
+%{_libdir}/qt6/plugins/kf6/overlayicon/mountedisooverlay.so
 %{_datadir}/config.kcfg/fileviewgitpluginsettings.kcfg
 %{_datadir}/config.kcfg/fileviewhgpluginsettings.kcfg
 %{_datadir}/config.kcfg/fileviewsvnpluginsettings.kcfg
